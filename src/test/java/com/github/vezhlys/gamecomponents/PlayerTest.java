@@ -47,7 +47,7 @@ public class PlayerTest {
 	public void playerDrawOutputsThatHeIsReady() {
 		systemOutRule.clearLog();
 		new Player(PLAYER).draw();
-		Assert.assertEquals("Player is ready.\n", systemOutRule.getLog());
+		Assert.assertTrue(systemOutRule.getLog().contains("Player is ready."));
 	}
 
 	@Test
